@@ -7,6 +7,8 @@ Currently (2025-01-04) I put the code in this repository. It "works on my machin
 
 Also cleaning jobs is not implemented. This might after a few days result in large history.txt files and memory-usage. 
 
+And I saw that when you schedule a job with parameters, it does not work.
+
 That said, if you want to use this code, feel free, go ahead. 
 
 Probably I am going to use it in production and with the issues I will be confronted with, I will update this code in the near future.
