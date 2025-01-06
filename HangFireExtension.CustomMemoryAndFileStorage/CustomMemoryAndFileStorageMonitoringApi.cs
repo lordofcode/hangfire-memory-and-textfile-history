@@ -180,6 +180,7 @@ namespace HangFireExtension.CustomMemoryAndFileStorage
             }
 
             var i = InvocationData.DeserializePayload(job.InvocationData);
+            i.Arguments = job.Arguments;
             return new JobDetailsDto
             {
                 CreatedAt = job.CreatedAt,
@@ -299,6 +300,7 @@ namespace HangFireExtension.CustomMemoryAndFileStorage
         private T? ParseJobToRequestedJobType<T>(Models.TableHangFireJob job, out InvocationData? invocationData, out JobLoadException? loadException) where T : class
         {
             invocationData = InvocationData.DeserializePayload(job.InvocationData);
+            invocationData.Arguments = job.Arguments;
             Job? resultJob = null;
             loadException = null;
 

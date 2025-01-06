@@ -149,7 +149,8 @@ namespace HangFireExtension.CustomMemoryAndFileStorage
             }
 
             var invocationData = InvocationData.DeserializePayload(record.InvocationData);
-
+            invocationData.Arguments = record.Arguments;
+            
             Job job = null;
             JobLoadException loadException = null;
 
